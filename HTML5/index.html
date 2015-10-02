@@ -18,7 +18,7 @@
     </div>
     <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
     <script type='text/javascript'>
-  // connect to canvas
+  // connect to canvas.
   var Module = {
     TOTAL_MEMORY: 268435456,
     filePackagePrefixURL: "Release/",
@@ -36,7 +36,7 @@
     canvas: document.getElementById('canvas'),
     progress: null,
     setStatus: function(text) {
-      if (this.progress == null) 
+      if (this.progress == null)
       {
         if (typeof UnityProgress != 'function')
           return;
@@ -48,7 +48,7 @@
       var m = text.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
       if (m)
         this.progress.SetProgress (parseInt(m[2])/parseInt(m[4]));
-      if (text === "") 
+      if (text === "")
         this.progress.Clear()
     },
     totalDependencies: 0,
@@ -70,7 +70,7 @@
   codeXHR.open('GET', 'Release/HTML5.js', true);
   codeXHR.onload = function() {
     var code = codeXHR.responseText;
-    if (!Math.fround) { 
+    if (!Math.fround) {
 try {
   console.log('optimizing out Math.fround calls');
   var m = /var ([^=]+)=global\.Math\.fround;/.exec(code);
